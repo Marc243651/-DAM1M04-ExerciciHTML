@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root {
+  /* Paleta de colores (adapta según el género musical) */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-primary: #ff2a5f;
+  --color-secondary: #00e5ff;
+  --color-text: #000000;
+  --color-text-muted: #9e9ea7;
+  --color-sold-out: #ff4d4d;
+  --color-valid: #2ecc71;
+
+  /* Tipografía y espaciado */
+  --font-main: 'Montserrat', sans-serif;
+  --radius-md: 12px;
+  --transition-fast: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden; /* Evita scroll horizontal en móviles (Tasca 12) */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*INDEX*/
+
 .hero img {
     width: 300px;
     max-width: 100%;
