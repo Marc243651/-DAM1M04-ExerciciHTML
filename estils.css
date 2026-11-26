@@ -43,3 +43,180 @@ body {
     display: block;
     margin: 20px auto;
 }
+/* =========================================
+   TASCA 7: PÀGINA DE MÚSICA (musica.html)
+   ========================================= */
+
+.musica-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.musica-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.musica-container .subtitulo {
+    text-align: center;
+    color: #71717a;
+    margin-bottom: 30px;
+}
+
+/* Sistema de pestanyes sense JS (radio + :checked) */
+.tabs-discografia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tabs-discografia input[type="radio"] {
+    display: none; /* Amaguem el cercle del radio button */
+}
+
+.tab-label {
+    padding: 10px 28px;
+    background-color: #27272a;
+    color: #f4f4f5;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.tab-label:hover {
+    background-color: #3f3f46;
+}
+
+/* Estil de la pestanya activa */
+#tab-albums:checked + label[for="tab-albums"],
+#tab-senzills:checked + label[for="tab-senzills"] {
+    background-color: #1DB954;
+    color: #000000;
+}
+
+/* Amaguem els continguts per defecte */
+.tab-content {
+    display: none;
+    width: 100%;
+    animation: fadeInTab 0.4s ease;
+}
+
+/* Mostrem només el contingut de la pestanya marcada */
+#tab-albums:checked ~ #content-albums,
+#tab-senzills:checked ~ #content-senzills {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Distribució CSS Flexbox de les portades */
+.discografia-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Targetes amb efectes animats (:hover) */
+.album-card {
+    background-color: #18181b;
+    color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+}
+
+.portada-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.portada-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom suau a la portada en passar el ratolí */
+.album-card:hover .portada-wrapper img {
+    transform: scale(1.08);
+}
+
+.album-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.album-year {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #27272a;
+    color: #1DB954;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.album-info h3 {
+    margin: 4px 0;
+    font-size: 1.25rem;
+}
+
+.album-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a1a1aa;
+    line-height: 1.4;
+}
+
+/* Secció del reproductor */
+.reproductor-section {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #18181b;
+    color: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.reproductor-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.spotify-embed {
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+}
+
+.audio-nativo {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.audio-nativo audio {
+    width: 100%;
+    margin-top: 10px;
+}

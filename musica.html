@@ -3,9 +3,185 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Principal</title>
+    <title>MUSICA</title>
     <link rel="stylesheet" href="estils.css">
 </head>
 
 <body>
+
+    <header>
+        <h1>MUSICA</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="musica.html">Música</a>
+            <a href="historia.html">Historia</a>
+            <a href="concerts.html">Conciertos</a>
+            <a href="contacte.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="musica-container">
+        <h2>Discografía</h2>
+        <p class="subtitulo">Explora nuestros álbumes de estudio y últimos lanzamientos.</p>
+
+        <!-- Sistema de pestanyes sense JavaScript (radio + :checked) -->
+        <div class="tabs-discografia">
+            <input type="radio" name="discografia-tab" id="tab-albums" checked>
+            <label for="tab-albums" class="tab-label">Álbumes</label>
+
+            <input type="radio" name="discografia-tab" id="tab-senzills">
+            <label for="tab-senzills" class="tab-label">Sencillos</label>
+
+            <!-- Contingut Pestanya 1: Àlbums -->
+            <div class="tab-content" id="content-albums">
+                <div class="discografia-grid">
+                    
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Nuevo comienzo">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2026</span>
+                            <h3>Nuevo comienzo</h3>
+                            <p>Nuestro álbum más reciente, fusionando ritmos urbanos con melodías atmosféricas y letras introspectivas.</p>
+                        </div>
+                    </article>
+
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Noches de neón">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2024</span>
+                            <h3>Noches de neón</h3>
+                            <p>Un viaje nocturno cargado de sintetizadores envolventes y colaboraciones internacionales.</p>
+                        </div>
+                    </article>
+
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Primera Musa">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2023</span>
+                            <h3>Primera Musa</h3>
+                            <p>El disco debut que marcó el inicio de nuestro sonido característico y alcanzó millones de reproducciones.</p>
+                        </div>
+                    </article>
+
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Sesiones en vivo">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2022</span>
+                            <h3>Sesiones en vivo</h3>
+                            <p>Grabación acústica especial con arreglos instrumentales en directo desde el estudio.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Contingut Pestanya 2: Senzills -->
+            <div class="tab-content" id="content-senzills">
+                <div class="discografia-grid">
+                    
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada En el instante">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2026</span>
+                            <h3>En el instante</h3>
+                            <p>Sencillo principal del nuevo proyecto con un ritmo hipnótico pensado para el directo.</p>
+                        </div>
+                    </article>
+
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Luces de ciudad">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2025</span>
+                            <h3>Luces de ciudad</h3>
+                            <p>Tema veraniego que mezcla percusión latina con bases electrónicas minimalistas.</p>
+                        </div>
+                    </article>
+
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Sin mirar atrás">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2025</span>
+                            <h3>Sin mirar atrás</h3>
+                            <p>Balada urbana producida en solitario con enfoque en la voz y la lírica.</p>
+                        </div>
+                    </article>
+
+                    <article class="album-card">
+                        <div class="portada-wrapper">
+                            <img src="imagenes/Omar-Courtz-y-el-arte-de-habitar-en-el-instante.jpg" alt="Portada Horizonte">
+                        </div>
+                        <div class="album-info">
+                            <span class="album-year">2024</span>
+                            <h3>Horizonte (Remix)</h3>
+                            <p>Nueva versión club de uno de nuestros temas más escuchados en plataformas digitales.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Secció de Reproductors (Spotify + HTML5 Audio) -->
+        <section class="reproductor-section">
+            <h3>Escucha nuestro último lanzamiento</h3>
+            
+            <!-- Reproductor incrustat de Spotify -->
+            <div class="spotify-embed">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Reproductor HTML5 audio de mostra -->
+            <div class="audio-nativo">
+                <p><strong>Avance exclusivo:</strong> "Nuevo comienzo (Demo)"</p>
+                <audio controls>
+                    <source src="audio/demo.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio HTML5.
+                </audio>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+        </div>
+
+        <p class="copyright">© 2026 ARTISTA</p>
+    </footer>
+
 </body>
+</html>
